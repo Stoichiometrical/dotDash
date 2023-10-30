@@ -1,0 +1,26 @@
+.dash{
+  display: flex;
+  flex-direction: column;
+  .nav{
+
+  }
+  .dash-body{
+    display: flex;
+    height: 100vh;
+    .side{
+      flex:1;
+      background-color: inherit;
+
+    }
+
+    .main{
+      background-color: green;
+      flex:4;
+
+    }
+
+
+  }
+
+
+}

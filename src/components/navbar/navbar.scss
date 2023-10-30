@@ -1,0 +1,43 @@
+.navbar{
+  height: 10vh;
+
+  display: flex;
+  margin:0;
+  padding: 5px;
+  justify-content: space-around;
+  align-items: center;
+  .logo{
+    img{
+      width:100%;
+      height: auto;
+      object-fit: cover;
+
+    }
+  }
+
+  .welcome-text{
+    color: green;
+    font-weight: 800;
+    font-size: 25px;
+
+  }
+
+  .search-bar{
+
+  }
+
+  .date{
+    display: flex;
+    gap:1em;
+
+    .icon{
+      cursor:pointer;
+    }
+
+    .date-text{
+     color:gray;
+      font-weight: 300;
+    }
+  }
+
+}

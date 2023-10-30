@@ -1,0 +1,19 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 300px; // Adjust the width as needed
+  //border: 1px solid #ccc;
+  //border-radius: 25px; // Rounded corners
+  padding: 8px;
+  background-color: transparent;
+
+  .MuiInputBase-root {
+    flex: 1;
+    margin-left: 10px; // Spacing between the icon and input text
+  }
+
+  .search-icon {
+    color: gray; // Gray color for the search icon
+  }
+}
+

@@ -1,0 +1,152 @@
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  gap:4%;
+  padding: 10px;
+  justify-content: space-around;
+
+  .nametags{
+    margin-top:16%;
+    display: flex;
+    flex-direction: column;
+    color:gray;
+    margin-left: 10%;
+    font-size: 20px;
+    //align-items: center;
+    //justify-content: center;
+
+
+    .pact{
+      display:flex;
+      gap:10px;
+      margin-bottom: 3%;
+
+      .name{
+        font-size: 19px;
+        font-weight: 400;
+        cursor:pointer
+
+      }
+      &:hover{
+      color: green;
+    }
+
+    }
+
+  }
+  .weather-box{
+    background-color: #838383;
+    border-radius: 35px;
+    padding:10px;
+    margin: 2%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3%;
+
+    .location{
+      display: flex;
+
+      .l-icon{
+        margin-right: 2%;
+
+      }
+
+      .l-name{
+
+      }
+
+    }
+
+    .weather-value{
+      font-family: Ubuntu,Poppins,sans-serif;
+      font-weight: bold;
+      font-size: 50px;
+
+    }
+     .weather-dets{
+       display: flex;
+
+       .side-arrow{
+
+       }
+
+       .more-dets{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         .text{
+
+         }
+
+         .latitudes{
+
+         }
+
+         .extra{
+           display: flex;
+           justify-content: space-between;
+           margin-top: 2%;
+
+           .f-sect{
+
+             .w-1{
+               display: flex;
+               padding-right: 38%;
+
+             }
+
+           }
+
+
+         }
+
+       }
+
+     }
+
+
+
+
+  }
+
+  .person{
+    display: flex;
+    gap:2%;
+    margin-top: 3%;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    img{
+      border-radius: 50%;
+      width:50px;
+      height: 50px;
+      object-fit: cover;
+      margin-right: 2%;
+
+    }
+
+    .name{
+      display: flex;
+      flex-direction: column;
+      gap:2%;
+
+      .names{
+
+      }
+
+      .email{
+
+      }
+
+    }
+
+
+  }
+
+
+}
