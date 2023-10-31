@@ -1,9 +1,10 @@
 .sidebar{
   display: flex;
   flex-direction: column;
-  gap:4%;
+  //gap:4%;
   padding: 10px;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: 100%;
 
   .nametags{
     margin-top:16%;
@@ -12,6 +13,7 @@
     color:gray;
     margin-left: 10%;
     font-size: 20px;
+    margin-bottom: 7%;
     //align-items: center;
     //justify-content: center;
 
@@ -19,11 +21,11 @@
     .pact{
       display:flex;
       gap:10px;
-      margin-bottom: 3%;
+      margin-bottom: 5%;
 
       .name{
         font-size: 19px;
-        font-weight: 400;
+        font-weight: 300;
         cursor:pointer
 
       }
@@ -34,28 +36,34 @@
     }
 
   }
+
+
   .weather-box{
     background-color: #838383;
     border-radius: 35px;
-    padding:10px;
-    margin: 2%;
+    padding:7px;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:3%;
+    margin: 2% 2% 8%;
 
     .location{
       display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
 
       .l-icon{
-        margin-right: 2%;
+
 
       }
 
       .l-name{
-
+        font-family: Inter, Poppins, sans-serif;
+        font-weight: 300;
       }
 
     }
@@ -68,8 +76,11 @@
     }
      .weather-dets{
        display: flex;
+       justify-content: space-between;
 
        .side-arrow{
+         cursor:pointer;
+         color:green;
 
        }
 
@@ -78,25 +89,42 @@
          flex-direction: column;
          justify-content: center;
          align-items: center;
+         margin-top: 1%;
+         margin-bottom: 1%;
 
          .text{
 
          }
 
          .latitudes{
+           margin-bottom: 5%;
 
          }
 
          .extra{
            display: flex;
-           justify-content: space-between;
-           margin-top: 2%;
+           flex-direction: column;
+           margin-top: 4%;
+           font-family: Ubuntu,Poppins,sans-serif;
+           margin-left: -38%;
+           font-weight: bold;
+           font-size: 18px;
 
            .f-sect{
+             display: flex;
 
              .w-1{
                display: flex;
                padding-right: 38%;
+               align-items: center;
+               justify-content: flex-start;
+
+               .w-1-text{
+                 font-family: Ubuntu,Poppins,sans-serif;
+
+
+               }
+
 
              }
 

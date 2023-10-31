@@ -1,6 +1,13 @@
 import "./sidebar.scss"
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import {ArrowCircleLeft, ArrowCircleRight} from "@mui/icons-material";
+import {
+    ArrowCircleLeft,
+    ArrowCircleRight, BiotechOutlined,
+    DonutSmallOutlined,
+    LocationOnOutlined,
+    WaterDrop
+} from "@mui/icons-material";
+import AirIcon from '@mui/icons-material/Air';
 
 export default  function Sidebar() {
     return(
@@ -15,14 +22,14 @@ export default  function Sidebar() {
                 </div>
 
                 <div className="pact">
-                    <DashboardOutlinedIcon/>
+                    <BiotechOutlined/>
                     <div className="name">
                         Crop Clinic
                     </div>
                 </div>
 
                 <div className="pact">
-                    <DashboardOutlinedIcon/>
+                    <DonutSmallOutlined/>
                     <div className="name">
                         Reports
                     </div>
@@ -31,18 +38,17 @@ export default  function Sidebar() {
             </div>
             <div className="weather-box">
                 <div className='location'>
-                    <div className='l-icon'>ICON</div>
+                    <div className='l-icon'> <LocationOnOutlined/> </div>
                     <div className='l-name'>Malanje, Angola</div>
                 </div>
-                <div className='weather-value'>29</div>
+                <div className='weather-value'>29&#176;</div>
                 <div className='weather-dets'>
                     <div className='side-arrow'>
-                       <ArrowCircleLeft/>
+                       <ArrowCircleLeft />
                         </div>
                     <div className='more-dets'>
-                        <div>
-                            Today;
-                            <br/>
+                        <div style={{display:'flex',flexDirection:'column',alignItems:'center',marginBottom:'5%',marginTop:'2%',fontWeight:'bold'}}>
+                            <span>Today</span>
                             9 December
                         </div>
                         <div className='latitudes'>
@@ -53,21 +59,19 @@ export default  function Sidebar() {
                         <div className='extra'>
                             <div className='f-sect'>
                                 <div className='w-1'>
-                                    <div className='w-1-icon'>ICON</div>
-                                    <div className='w-1-text'>WIND</div>
+                                    <div className='w-1-icon'> <AirIcon/> </div>
+                                    <div className='w-1-text'>Wind</div>
                                 </div>
-
-                                <div className='w-1'>
-                                    <div className='w-1-icon'>ICON</div>
-                                    <div className='w-1-text'>WIND</div>
-                                </div>
+                                <div className='w-2-text'>11km/h</div>
                             </div>
 
                             <div className='f-sect'>
-                                <div className='w-2-text'>11km/h</div>
+                                <div className='w-1'>
+                                    <div className='w-1-icon'> <WaterDrop/> </div>
+                                    <div className='w-1-text'>Precip</div>
+                                </div>
                                 <div className='w-2-text'>22mm</div>
                             </div>
-
 
                         </div>
                     </div>
