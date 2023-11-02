@@ -1,0 +1,107 @@
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .signin-image {
+    flex: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .signin-form {
+    flex: 1;
+    padding: 20px;
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 5%;
+
+      .form-group {
+        margin-bottom: 20px;
+        label {
+          font-weight: bold;
+        }
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+        }
+      }
+
+      button {
+        padding: 10px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+
+    .signup-text {
+      text-align: center;
+      margin-top: 20px;
+
+      a {
+        color: blue;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Responsive styles for smaller screens (e.g., mobile phones)
+  @media (max-width: 768px) {
+    .signin-container { // Add this selector
+      flex-direction: column;
+
+      .signin-image {
+        flex: none; // Remove image flex for stacking
+        width: 100%; // Make image full width
+        max-height: 40vh; // Limit image heightt
+
+
+      }
+
+      h2 {
+        font-size: 1.5rem; // Adjust heading font size
+      }
+
+      .form-group {
+        margin-bottom: 15px; // Adjust margin between form groups
+        label {
+          font-weight: normal; // Adjust label font weight
+        }
+        input {
+          padding: 8px; // Adjust input padding
+        }
+      }
+
+      button {
+        padding: 8px; // Adjust button padding
+      }
+
+      .signup-text {
+        margin-top: 15px; // Adjust margin between the text and link
+        a {
+          font-size: 1rem; // Adjust link font size
+        }
+      }
+    }
+  }
+}

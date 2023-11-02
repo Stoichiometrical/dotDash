@@ -1,0 +1,105 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .signup-image {
+    flex: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .signup-form {
+    flex: 1;
+    padding: 20px;
+    //background-color: #f2f2f2;
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 5%;
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .form-feedback {
+        color: #ff0000;
+      }
+
+      button {
+        padding: 10px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button:hover{
+        background-color: blue;
+      }
+
+
+    }
+
+    .signin-text {
+      margin-top: 5%;
+      margin-left: 35%;
+    }
+  }
+
+  // Add padding to the .signup-form container
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack image and form on small screens
+
+    .signup-image {
+      flex: none; // Remove image flex for stacking
+      width: 100%; // Make image full width
+      max-height: 40vh; // Limit image height
+    }
+
+    .signup-form {
+      flex: none; // Remove form flex for stacking
+      width: 100%; // Make form full width
+      padding: 10px; // Reduce padding for small screens
+
+      form {
+         padding: 10px;
+        .form-group {
+          margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+          width: 80%; // Make inputs full width
+        }
+
+        button {
+          padding: 8px; // Adjust button padding
+        }
+      }
+    }
+  }
+}
