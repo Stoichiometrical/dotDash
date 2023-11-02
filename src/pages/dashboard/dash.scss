@@ -38,6 +38,69 @@
     }
   }
 
+  .reports-sect{
+    h3{
+
+    }
+
+    .reports-h{
+      margin-bottom: 3%;
+    }
+
+  }
+
+  .articles{
+    width:90%;
+    margin: 5% 5% 5% 1%;
+
+    .articles-header{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      h3{
+
+      }
+
+      .see-all{
+        display: flex;
+        margin: 2%;
+        cursor:pointer;
+        .text{
+          font-size: 1.1rem;
+          color:#737B8B;
+
+        }
+
+      }
+    }
+
+    .articles-subheader{
+      color: #737B8B;
+      margin-bottom: 2%;
+    }
+    .article-cards{
+      display: flex;
+      gap:5%;
+    }
+
+    .satelite{
+      margin-top: 2%;
+      h3{
+
+      }
+
+      img{
+        height: 40vh;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5%;
+        margin-top: 2%;
+      }
+    }
+  }
+
+
+
 
 
 

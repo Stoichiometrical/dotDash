@@ -1,0 +1,36 @@
+.reports{
+  display: flex;
+  justify-content: space-between;
+  align-items :center;
+  background-color: #F9F9F9;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  border:0.5px solid rgba(128, 128, 128, 0.45);
+
+
+  .t{
+
+    padding: 5px;
+    border-radius: 10px;
+
+
+
+    .name{
+      color:#798AA9;
+      margin-bottom: 1%;
+      font-weight: bold;
+
+    }
+
+    .desc{
+      color: #909090;
+
+    }
+  }
+
+
+
+}
