@@ -7,19 +7,22 @@ import {
 } from "react-router-dom";
 import SignUp from "./components/signup/Signup.jsx";
 import SignIn from "./components/signup/SignIn.jsx";
+import Home from "./pages/dashboard/Home.jsx";
+import CropClinics from "./pages/crop_clinic/CC.jsx";
+import Report from "./pages/reports/Report.jsx";
 
 const router = createBrowserRouter([
     {
         path:"",
-        element:<App/>
+        element:<Home/>
     },
     {
         path:"/cropclinic",
-        element:""
+        element:<CropClinics/>
     },
     {
         path:"/reports",
-        element:""
+        element:<Report/>
     },
     {
         path:"/dash",

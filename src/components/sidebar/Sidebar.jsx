@@ -8,6 +8,7 @@ import {
     WaterDrop
 } from "@mui/icons-material";
 import AirIcon from '@mui/icons-material/Air';
+import {Link} from "react-router-dom";
 
 export default  function Sidebar() {
     return(
@@ -24,14 +25,14 @@ export default  function Sidebar() {
                 <div className="pact">
                     <BiotechOutlined/>
                     <div className="name">
-                        Crop Clinic
+                       <Link to="/cropclinic" style={{textDecoration:"none",color:"inherit"}}>Crop Clinic</Link>
                     </div>
                 </div>
 
                 <div className="pact">
                     <DonutSmallOutlined/>
                     <div className="name">
-                        Reports
+                        <Link to="/reports" style={{textDecoration:"none",color:"inherit"}}> Reports</Link>
                     </div>
                 </div>
 

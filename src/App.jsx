@@ -1,6 +1,6 @@
 import DashboardFrame from "./components/dashframe/DashFrame.jsx";
-import Dashboard from "./pages/dashboard/Dashboard.jsx";
-import CropClinic from "./pages/crop_clinic/CropClinic.jsx";
+
+import Reports from "./pages/reports/Reports.jsx";
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div>
-          <DashboardFrame contents={ <CropClinic/>}/>
+          <DashboardFrame contents={ <Reports/>}/>
 
       </div>
     </>
