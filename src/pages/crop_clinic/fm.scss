@@ -1,0 +1,51 @@
+/* Add styling for the form container */
+.form-container {
+  width: 80%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels and inputs */
+.form-group {
+  margin-bottom: 10px;
+
+  label {
+    display: block;
+    margin-bottom: 1%;
+  }
+
+  select {
+    width: 100%; /* Make select fields take the full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 1%;
+  }
+
+  input {
+    width: 100%; /* Make input fields take the full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 1%;
+  }
+}
+
+/* Style the Generate Report button */
+button {
+  background-color: #55A55E;
+  color: white;
+  padding: 10px 0; /* Remove horizontal padding to make it full width */
+  border: none;
+  border-radius: 0 0 15px 15px; /* Apply border-radius only at the bottom */
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Make the button take the full width */
+}

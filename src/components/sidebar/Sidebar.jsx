@@ -18,7 +18,7 @@ export default  function Sidebar() {
                 <div className="pact">
                     <DashboardOutlinedIcon/>
                     <div className="name">
-                        Dashboard
+                        <Link to="/dash" style={{textDecoration:"none",color:"inherit"}}> Dashboard</Link>
                     </div>
                 </div>
 

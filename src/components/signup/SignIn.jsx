@@ -12,6 +12,7 @@ const SignIn = () => {
                 />
             </div>
             <div className="signin-form">
+                <h1 style={{textAlign:"center",marginBottom:"2%"}}>Welcome Back to dotTerra!!</h1>
                 <h2>Sign In</h2>
                 <form>
                     <div className="form-group">
@@ -24,7 +25,7 @@ const SignIn = () => {
                         <input type="password" id="password" name="password" />
                     </div>
 
-                    <button type="submit"><Link to='/dash' style={{ textDecoration: "none",color:"white" }}>Sign In</Link></button>
+                    <button ><Link to='/dash' style={{ textDecoration: "none",color:"white" }}>Sign In</Link></button>
                 </form>
 
                 <p className="signup-text">

@@ -14,7 +14,7 @@ import Report from "./pages/reports/Report.jsx";
 const router = createBrowserRouter([
     {
         path:"",
-        element:<Home/>
+        element:<SignIn/>
     },
     {
         path:"/cropclinic",
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     },
     {
         path:"/dash",
-        element: <App/>
+        element: <Home/>
     },
     {
         path:"/signup",

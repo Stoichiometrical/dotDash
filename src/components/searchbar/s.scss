@@ -1,0 +1,24 @@
+
+.search-bars {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px; /* Adjust the right position as needed */
+    color: #333; /* Set the color for the search icon */
+    cursor: pointer;
+  }
+}
+
+
