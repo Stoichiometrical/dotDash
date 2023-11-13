@@ -24,4 +24,21 @@
   }
 
 
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 5%;
+  
+
+    .dash-body{
+      padding-top: 12%;
+
+      .main{
+        display: none;
+      }
+    }
+  }
+
 }
