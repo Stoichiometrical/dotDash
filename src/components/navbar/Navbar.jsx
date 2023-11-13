@@ -2,15 +2,19 @@ import Searchbar from "../searchbar/Searchbar.jsx";
 import im from "../../assets/im.png"
 import "./navbar.scss"
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
+import { useAuth } from "../../utils/AuthContext.jsx";
 
 export default function Navbar() {
+    const { user } = useAuth(); 
+
+
     return (
         <div className="navbar">
             <div className="logo">
                 <img src={im} alt="Missing" />
             </div>
             <div className="welcome-text">
-                Welcome back, Milton!
+                Welcome back, {user.fullName}
             </div>
             <div className="search-bar">
                 <Searchbar />

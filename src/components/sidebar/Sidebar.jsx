@@ -9,8 +9,11 @@ import {
 } from "@mui/icons-material";
 import AirIcon from '@mui/icons-material/Air';
 import {Link} from "react-router-dom";
+import { useAuth } from "../../utils/AuthContext.jsx";
+
 
 export default  function Sidebar() {
+    const { user } = useAuth(); 
     return(
         <div className="sidebar">
 
@@ -85,9 +88,9 @@ export default  function Sidebar() {
                 <img src='https://images.pexels.com/photos/3799124/pexels-photo-3799124.jpeg?auto=compress&cs=tinysrgb&w=600' alt='Missing'/>
                 <div className='name'>
                     <div className='names'>
-                        Milton Sebastio
+                       {user.fullName}
                     </div>
-                    <div className='email'>milton@dottera.co</div>
+                    <div className='email'>{user.email}</div>
                 </div>
 
             </div>
