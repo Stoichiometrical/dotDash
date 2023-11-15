@@ -27,7 +27,7 @@ const SignUp = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await fetch("http://localhost:8800/api/auth/register", {
+      const response = await fetch("https://dot-backend.onrender.com/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
