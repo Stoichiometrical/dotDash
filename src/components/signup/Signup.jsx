@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import "./SignUp.scss";
+// import "./SignUp.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../utils/AuthContext";
 
