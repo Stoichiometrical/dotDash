@@ -27,6 +27,7 @@ const SignIn = () => {
         console.log(userData);
         history("/dash");
       } else {
+        alert("Sign in failed.Please enter the correct details")
         console.error("Sign in failed");
       }
     } catch (error) {

@@ -10,10 +10,37 @@ import {
 import AirIcon from '@mui/icons-material/Air';
 import {Link} from "react-router-dom";
 import { useAuth } from "../../utils/AuthContext.jsx";
+import {getWeatherData} from '../../utils/utilityFunction';
+import { useState , useEffect} from "react";
 
 
 export default  function Sidebar() {
     const { user } = useAuth(); 
+    
+    
+    const formatTodayDate = () => {
+        const options = { day: 'numeric', month: 'long' };
+        const today = new Date();
+        return today.toLocaleDateString('en-US', options);
+      };
+
+    const [weatherData, setWeatherData] = useState(null);
+    console.log(weatherData)
+
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      try {
+        const data = await getWeatherData('Malanje'); // Replace with your desired city
+        setWeatherData(data);
+      } catch (error) {
+        console.error('Error fetching weather data:', error.message);
+      }
+    };
+
+    fetchWeatherData();
+  }, []);
+
+
     return(
         <div className="sidebar">
 
@@ -45,7 +72,14 @@ export default  function Sidebar() {
                     <div className='l-icon'> <LocationOnOutlined/> </div>
                     <div className='l-name'>Malanje, Angola</div>
                 </div>
-                <div className='weather-value'>29&#176;</div>
+                {
+                    weatherData && (
+                        <div className='weather-value'>{ weatherData? weatherData.temp_c: "Missing"}&#176;</div>
+
+                    )
+
+                }
+                
                 <div className='weather-dets'>
                     <div className='side-arrow'>
                        <ArrowCircleLeft />
@@ -53,12 +87,12 @@ export default  function Sidebar() {
                     <div className='more-dets'>
                         <div style={{display:'flex',flexDirection:'column',alignItems:'center',marginBottom:'5%',marginTop:'2%',fontWeight:'bold'}}>
                             <span>Today</span>
-                            9 December
+                            {formatTodayDate()}
                         </div>
                         <div className='latitudes'>
-                            Lat -9.7865
+                            Lat { weatherData ? weatherData.latitude : "-9.7865" }
                             <br/>
-                            Long 8.0896
+                            Long { weatherData ? weatherData.longitude : "-9.7865" }
                         </div>
                         <div className='extra'>
                             <div className='f-sect'>
@@ -66,7 +100,7 @@ export default  function Sidebar() {
                                     <div className='w-1-icon'> <AirIcon/> </div>
                                     <div className='w-1-text'>Wind</div>
                                 </div>
-                                <div className='w-2-text'>11km/h</div>
+                                <div className='w-2-text'>{ weatherData ? weatherData.wind_kph + "kph" : "Missing" }</div>
                             </div>
 
                             <div className='f-sect'>
@@ -74,7 +108,7 @@ export default  function Sidebar() {
                                     <div className='w-1-icon'> <WaterDrop/> </div>
                                     <div className='w-1-text'>Precip</div>
                                 </div>
-                                <div className='w-2-text'>22mm</div>
+                                <div className='w-2-text'>{ weatherData ? weatherData.precip_mm + "mm" : "Missing" }</div>
                             </div>
 
                         </div>
@@ -99,3 +133,4 @@ export default  function Sidebar() {
 
     )
 }
+
