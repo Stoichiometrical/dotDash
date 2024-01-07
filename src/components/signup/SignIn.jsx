@@ -45,7 +45,7 @@ const SignIn = () => {
       </div>
       <div className="signin-form">
         <h1 style={{ textAlign: "center", marginBottom: "2%" }}>
-          Welcome Back to dotTerra!!
+          Welcome Back to dotTerra
         </h1>
         <h2>Sign In</h2>
         <form onSubmit={handleSignIn}>
