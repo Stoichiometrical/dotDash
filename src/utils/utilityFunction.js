@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getWeatherData =async (city)=> {
     // API endpoint
-    const apiUrl = "http://api.weatherapi.com/v1/forecast.json";
+    const apiUrl = "https://api.weatherapi.com/v1/forecast.json";
 
     // API key (replace with your own key)
     const apiKey = "c78b306a6c4946c9ade192950240601";
