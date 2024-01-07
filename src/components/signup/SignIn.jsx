@@ -30,12 +30,15 @@ const SignIn = () => {
         console.log(userData);
         history("/dash");
       } else {
-        setLoading(false)
+
         alert("Sign in failed.Please enter the correct details")
+
         console.error("Sign in failed");
       }
     } catch (error) {
       console.error("Error during sign in", error);
+    }finally {
+      setLoading(false)
     }
   };
 
@@ -75,11 +78,11 @@ const SignIn = () => {
           </div>
           <button type="submit" onSubmit={handleSignIn}>Sign In</button>
           {
-            loading && <div className="loader">
+            loading && (<div className="loader">
                 Loading...
             <img src="https://technometrics.net/wp-content/uploads/2020/11/loading-icon-animated-gif-19-1.gif" style={{width:"100%",height:"30px"}}  alt="Missing"/>
-                     
-            </div>
+
+            </div>)
           }
         </form>
         <p className="signup-text">
