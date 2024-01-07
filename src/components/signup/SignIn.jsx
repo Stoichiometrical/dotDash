@@ -8,6 +8,7 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useNavigate();
+  const[loading,setLoading] = useState(false)
 
   const handleSignIn = async (e) => {
     e.preventDefault();
@@ -20,13 +21,16 @@ const SignIn = () => {
         },
         body: JSON.stringify({ email, password }),
       });
+      setLoading(true)
 
       if (response.ok) {
+        setLoading(false)
         const userData = await response.json();
         login(userData);
         console.log(userData);
         history("/dash");
       } else {
+        setLoading(false)
         alert("Sign in failed.Please enter the correct details")
         console.error("Sign in failed");
       }
@@ -70,6 +74,13 @@ const SignIn = () => {
             />
           </div>
           <button type="submit" onSubmit={handleSignIn}>Sign In</button>
+          {
+            loading && <div className="loader">
+                Loading...
+            <img src="https://technometrics.net/wp-content/uploads/2020/11/loading-icon-animated-gif-19-1.gif" style={{width:"100%",height:"30px"}}  alt="Missing"/>
+                     
+            </div>
+          }
         </form>
         <p className="signup-text">
           Don't have an account? <Link to="/signup">Sign up</Link>
